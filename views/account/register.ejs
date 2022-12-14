@@ -1,0 +1,60 @@
+<% layout('../layout/Boilerplate') %>
+
+<div class="col-6 offset-3 card shadow mb-3">
+  <div class="card-body">
+    <img
+      src="https://images.unsplash.com/photo-1571863533956-01c88e79957e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80"
+      alt=""
+      height="200px"
+      class="card-img-top mb-3"
+    />
+    <h1 class="text-left mb-3">Account Registration</h1>
+    <form method="post" action="/signup" class="needs-validation" noValidate>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="Email address"
+          aria-describedby="emailHelp"
+          required
+        />
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+          name="username"
+          placeholder="Username"
+          aria-describedby="usernameHelp"
+          required
+        />
+        <div id="usernameHelp" class="form-text">Username must be of 6 characters long.</div>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          required
+        />
+        <div id="emailHelp" class="form-text">
+          Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special
+          characters, or emoji.
+        </div>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <button class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

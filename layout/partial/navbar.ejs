@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Yelp</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo01"
+      aria-controls="navbarTogglerDemo01"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="/">Home</a>
+        <a class="nav-link" href="/campground">Campground</a>
+        <a class="nav-link" href="/campground/new">New Campground</a>
+      </div>
+      <div class="navbar-nav ml-auto">
+        <% if (!signUser) { %>
+        <a class="nav-link" href="/login">Login</a>
+        <a class="nav-link" href="/SignUp">SignUp</a>
+        <% } else { %>
+        <a class="nav-link" href="/Logout">logout</a>
+        <% } %>
+      </div>
+    </div>
+    <form class="d-flex" role="search" method="get" action="">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search Location"
+        id="query"
+        name="q"
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
